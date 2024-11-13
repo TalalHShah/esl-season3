@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Squads</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .team {
+            min-width: 300px;
+            margin: 10px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .team img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .rsk:hover {
+            background-color: rgb(255, 230, 0);  
+            transform: scale(0.98);
+            transition: 0.5s all ease-in-out;          
+        }
+
+        .bp:hover {
+            background-color: rgb(22, 0, 77);  
+            transform: scale(0.98);
+            transition: 0.5s all ease-in-out;          
+        }
+
+        .pw:hover {
+            background-color: rgb(200, 0, 0);  
+            transform: scale(0.98);
+            transition: 0.5s all ease-in-out;          
+        }
+
+        .bb:hover {
+            background-color: rgb(0, 200, 67);   
+            transform: scale(0.98);
+            transition: 0.5s all ease-in-out;          
+        }
+
+        .bh:hover {
+            background-color: rgb(0, 0, 0);  
+            transform: scale(0.98);
+            transition: 0.5s all ease-in-out;          
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th, td:hover {
+            transform: scale(1.03);
+            transition: all 0.5s ease-in-out;
+            background-color: rgb(51, 51, 51) !important;
+            color: white;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+        }
+
+        td:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        /* Team captain styling */
+        .captain {
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        /* Button Styles */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            th, td {
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team {
+                margin: 10px 0;
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            th, td {
+                padding: 6px;
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Buttons -->
+    <div class="btn-container">
+        <a href="round1.html"><button class="btn">Round 1</button></a>
+        <a href="round2.html"><button class="btn">Round 2</button></a>
+        <a href="points_table.html"><button class="btn">Points Table</button></a>
+        <a href="index.html"><button class="btn">Back</button></a>
+    </div>
+
+    <h1>Team Squads</h1>
+
+    <!-- Team Squads Container -->
+    <div class="team-container">
+
+        <!-- Royal Super Knights -->
+        <div class="team rsk">
+            <img src="Selwyn.png" alt="Royal Super Knights Manager">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Royal Super Knights</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="captain">Selwyn Baretto ©</td></tr>
+                    <tr><td>Markram</td></tr>
+                    <tr><td>Tabraiz Shamsi</td></tr>
+                    <tr><td>Jasprit Bumrah</td></tr>
+                    <tr><td>Rishab Pant</td></tr>
+                    <tr><td>Mitchell Marsh</td></tr>
+                    <tr><td>Matheesha Pathirana</td></tr>
+                    <tr><td>Trent Boult</td></tr>
+                    <tr><td>Rashid Khan</td></tr>
+                    <tr><td>Sam Curran</td></tr>
+                    <tr><td>Jonny Bairstow</td></tr>
+                    <tr><td>Haris Rauf</td></tr>
+                    <tr><td>Ravichandran Ashwin</td></tr>
+                    <tr><td>Fin Allen</td></tr>
+                    <tr><td>Yuzi Chahal</td></tr>
+                    <tr><td>Devon Conway</td></tr>
+                    <tr><td>Bhuvneshwar Kumar</td></tr>
+                    <tr><td>Andre Russell</td></tr>
+                    <tr><td>Axar Patel</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Blue Panthers -->
+        <div class="team bp">
+            <img src="Talal.png" alt="Blue Panthers Manager">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Blue Panthers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>David Miller</td></tr>
+                    <tr><td>KL Rahul</td></tr>
+                    <tr><td>Shubman Gill</td></tr>
+                    <tr><td>Steve Smith</td></tr>
+                    <tr><td>Kane Williamson</td></tr>
+                    <tr><td>Jos Buttler</td></tr>
+                    <tr><td>Dawid Malan</td></tr>
+                    <tr><td>Abdullah Shafique</td></tr>
+                    <tr><td>Joe Root</td></tr>
+                    <tr><td>Shakib Al Hasan</td></tr>
+                    <tr><td>Alick Athanaze</td></tr>
+                    <tr><td>Wanindu Hasaranga</td></tr>
+                    <tr><td class="captain">Talal H Shah ©</td></tr>
+                    <tr><td>Anrich Nortje</td></tr>
+                    <tr><td>Umran Malik</td></tr>
+                    <tr><td>Tim Southee</td></tr>
+                    <tr><td>Shaheen Shah Afridi</td></tr>
+                    <tr><td>David Willey</td></tr>
+                    <tr><td>-- -- -- -- --</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Bandbros -->
+        <div class="team bb">
+            <img src="Bradley.png" alt="Bandbros Manager">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bandbros</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Kagiso Rabada</td></tr>
+                    <tr><td>Virat Kohli</td></tr>
+                    <tr><td>Kuldeep Yadav</td></tr>
+                    <tr><td>Hardik Pandya</td></tr>
+                    <tr><td>Glenn Maxwell</td></tr>
+                    <tr><td>Adam Zampa</td></tr>
+                    <tr><td>Dasun Shanaka</td></tr>
+                    <tr><td>Mitchell Santner</td></tr>
+                    <tr><td>Akeal Hosein</td></tr>
+                    <tr><td>Ben Stokes</td></tr>
+                    <tr><td>Jofra Archer</td></tr>
+                    <tr><td>Sarfaraz Ahmed</td></tr>
+                    <tr><td>Naseem Shah</td></tr>
+                    <tr><td class="captain">Bradley Dsouza ©</td></tr>
+                    <tr><td>Ishan Kishan</td></tr>
+                    <tr><td>Marcus Stoinis</td></tr>
+                    <tr><td>Sanju Samson</td></tr>
+                    <tr><td>Arshdeep Singh</td></tr>
+                    <tr><td>-- -- -- -- --</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Peace Walkers -->
+        <div class="team pw">
+            <img src="Umaid.png" alt="Peace Walkers Manager">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Peace Walkers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Henrich Klassen</td></tr>
+                    <tr><td>Quintin De Kock</td></tr>
+                    <tr><td>Ravindra Jadeja</td></tr>
+                    <tr><td>Patt Cummins</td></tr>
+                    <tr><td>Daryl Mitchell</td></tr>
+                    <tr><td>Ish Sodhi</td></tr>
+                    <tr><td>Jason Holder</td></tr>
+                    <tr><td>Adil Rashid</td></tr>
+                    <tr><td>Mohammad Rizwan</td></tr>
+                    <tr><td>Iftikhar Ahmed</td></tr>
+                    <tr><td>Mohammad Aamir</td></tr>
+                    <tr><td>Phil Salt</td></tr>
+                    <tr><td>Glenn Phillips</td></tr>
+                    <tr><td>Mohammad Wasim Jr</td></tr>
+                    <tr><td>Nissanka</td></tr>
+                    <tr><td>Inglis</td></tr>
+                    <tr><td class="captain">Umaid Ali ©</td></tr>
+                    <tr><td>-- -- -- -- --</td></tr>
+                    <tr><td>-- -- -- -- --</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Black Hawks -->
+        <div class="team bh">
+            <img src="Yasir.png" alt="Black Hawks Manager">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Black Hawks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="captain">Babar Azam ©</td></tr>
+                    <tr><td>Rohit Sharma</td></tr>
+                    <tr><td>Mark Wood</td></tr>
+                    <tr><td>Surya Kumar Yadav</td></tr>
+                    <tr><td>Mitchell Starc</td></tr>
+                    <tr><td>Travis Head</td></tr>
+                    <tr><td>Kusal Mendis</td></tr>
+                    <tr><td>Rachin Ravindra</td></tr>
+                    <tr><td>Nicholas Pooran</td></tr>
+                    <tr><td>Rahmanullah Gurbaz</td></tr>
+                    <tr><td>Liam Livingstone</td></tr>
+                    <tr><td>Muhammad Siraj</td></tr>
+                    <tr><td>Shadab Khan</td></tr>
+                    <tr><td>Fakhar Zaman</td></tr>
+                    <tr><td>Zaman Khan</td></tr>
+                    <tr><td>Muhammad Nawaz</td></tr>
+                    <tr><td>Marnus Labuschagne</td></tr>
+                    <tr><td>Yasir Saood</td></tr>
+                    <tr><td>-- -- -- -- --</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>

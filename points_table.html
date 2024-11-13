@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Points Table - ESL Season 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg,rgb(255, 210, 210),rgb(177, 219, 255)) !important;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background: url('ESL2.png') no-repeat center center fixed;
+            background-size: cover;
+            animation: backgroundAnimation 20s infinite linear;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Table Styles */
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: rgba(2, 110, 187, 0.6);
+            box-shadow: 0 4px 10px rgba(46, 46, 46, 0.1);
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        td {
+            font-size: 16px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #797979;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Button Styles */
+        .button-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+
+        .back-btn, .round-btn {
+            background-color: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 25%;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .back-btn:hover, .round-btn:hover {
+            background-color: #5a6268;
+        }
+
+        .round-btn {
+            background-color: #007BFF;
+        }
+
+        .round-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+                font-size: 14px;
+            }
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .round-btn, .back-btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="color: black;">Points Table - ESL Season 3</h1>
+
+        <!-- Button Section -->
+        <div class="button-container">
+            <a href="round1.html" class="round-btn">Round 1</a>
+            <a href="round2.html" class="round-btn">Round 2</a>
+            <a href="index.html" class="back-btn">Back to Fixtures</a>
+        </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Team</th>
+                    <th>Played</th>
+                    <th>Won</th>
+                    <th>Lost</th>
+                    <th>Points</th>
+                    <th>Runs Scored</th>
+                    <th>Runs Conceded</th>
+                    <th>Net Run Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Peace Walkers</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Blue Panthers</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Royal Super Knights</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Bandbros</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Black Hawks</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+</body>
+</html>
