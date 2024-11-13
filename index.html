@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESL Season 3 Fixtures</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg,rgb(255, 210, 210),rgb(177, 219, 255));
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #444;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;   
+            height: 200px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .star {
+            font-size: 24px;
+            color: gold;
+            position: absolute;
+            bottom: 3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 16px;
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .card img:hover {
+            transform: scale(0.95);
+            transition: 0.5s all ease-in-out;
+        }
+
+        .card-large {
+            width: 400px;
+            height: 200px;
+        }
+
+        .card-container a {
+            text-decoration: none;
+        }
+
+        /* Managers Cards Section */
+        .ManagerCards {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+                max-width: 300px;
+                margin-bottom: 20px;
+            }
+
+            .card-large {
+                width: 90%;
+                max-width: 300px;
+                height: auto;
+            }
+        }
+
+        .bluepanthers:hover {
+            background-color: rgb(0, 0, 153);
+            color: white;
+        }
+        .peacewalkers:hover {
+            background-color: rgb(213, 0, 0);
+            color: white;
+        }
+        .royalsuperknights:hover {
+            background-color: rgb(255, 234, 0);
+            color: rgb(0, 0, 0);
+        }
+        .bandbros:hover {
+            background-color: rgb(0, 175, 29);
+            color: white;
+        }
+        .blackhawks:hover {
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        .linkofsquads {
+            text-decoration: none;
+            color: rgb(54, 54, 54);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ESL SEASON 3 - FIXTURES</h1>
+
+    <div class="card-container">
+        <!-- ROUND 1 and ROUND 2 square cards -->
+        <div class="card">
+            <a href="round1.html">
+                <div class="card-title">ROUND 1</div>
+                <div class="card-description">View the fixtures for Round 1</div>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="round2.html">
+                <div class="card-title">ROUND 2</div>
+                <div class="card-description">View the fixtures for Round 2</div>
+            </a>
+        </div>
+
+        <!-- POINTS TABLE rectangular card -->
+        <div class="card card-large">
+            <a href="points_table.html">
+                <div class="card-title">POINTS TABLE</div>
+                <div class="card-description">Check the current standings and points</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Managers Cards -->
+    <br>
+
+        <h1>MANAGERS (TEAMS)</h1>
+        <a href="squads.html" class="linkofsquads"><div class="ManagerCards">        
+        <div class="card bluepanthers">
+            <span class="star">&#9733;</span>
+            <img src="Talal.png" alt="Talal H Shah">
+            <div class="card-title">Talal H Shah</div>
+            <div class="card-description">Blue Panthers</div>
+        </div>
+
+        <div class="card peacewalkers">
+            <span class="star">&#9733;</span>
+            <img src="Umaid.png" alt="Umaid Ali">
+            <div class="card-title">Umaid Ali</div>
+            <div class="card-description">Peace Walkers <br><i style="font-size: 12px;">(Defending Champions)</i></div>
+        </div>
+
+        <div class="card royalsuperknights">
+            <img src="Selwyn.png" alt="Selwyn Baretto">
+            <div class="card-title">Selwyn Baretto</div>
+            <div class="card-description">Royal Super Knights</div>
+        </div>
+
+        <div class="card bandbros">
+            <img src="Bradley.png" alt="Bradley D'souza">
+            <div class="card-title">Bradley D'souza</div>
+            <div class="card-description">Bandbros</div>
+        </div>
+
+        <div class="card blackhawks">
+            <img src="Yasir.png" alt="Yasir Saood">
+            <div class="card-title">Yasir Saood</div>
+            <div class="card-description">Black Hawks</div>
+        </div>
+    </div></a>
+
+</body>
+</html>
