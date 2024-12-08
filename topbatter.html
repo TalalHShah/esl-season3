@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Stats</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/esl-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .container {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 90%;
+        }
+        .buttons {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .buttons button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        table th, table td {
+            border: 1px solid #555;
+            padding: 10px;
+            text-align: center;
+        }
+        table th {
+            background-color: #444;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <button onclick="goBack()">Back</button>
+            <button onclick="location.href='round1.html'">Round 1</button>
+            <button onclick="location.href='round2.html'">Round 2</button>
+            <button onclick="location.href='points_table.html'">Points Table</button>
+        </div>
+        <h1 style="text-align: center;">HIGHEST RUN SCORER</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Picture</th>
+                    <th>Player</th>
+                    <th>Team</th>
+                    <th>Innings</th>
+                    <th>Score</th>
+                    <th>Balls</th>
+                    <th>Strike Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="http://127.0.0.1:5500/Talal.png" alt="Talal H Shah"></td>
+                    <td>Talal H Shah</td>
+                    <td>Blue Panthers</td>
+                    <td>4</td>
+                    <td>155</td>
+                    <td>65</td>
+                    <td>238.46</td>
+                </tr>
+                <tr>
+                    <td><img src="http://127.0.0.1:5500/Umaid.png" alt="Umaid Ali Qureshi"></td>
+                    <td>Umaid Ali Qureshi</td>
+                    <td>Peace Walkers</td>
+                    <td>4</td>
+                    <td>149</td>
+                    <td>91</td>
+                    <td>163.74</td>
+                </tr>
+                <tr>
+                    <td><img src="https://api.bdcrictime.com/Profile/quinton-de-kock-09_10_2023.jpg" alt="Quinton De Kock"></td>
+                    <td>Quinton De Kock</td>
+                    <td>Peace Walkers</td>
+                    <td>4</td>
+                    <td>127</td>
+                    <td>81</td>
+                    <td>156.79</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.mykhel.com/webp/images/cricket/players/1/4541.jpg" alt="Joe Root"></td>
+                    <td>Joe Root</td>
+                    <td>Blue Panthers</td>
+                    <td>4</td>
+                    <td>113</td>
+                    <td>42</td>
+                    <td>269.05</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.mykhel.com/webp/images/cricket/players/8/7888.jpg" alt="Sam Curran"></td>
+                    <td>Sam Curran</td>
+                    <td>Royal Super Knights XI</td>
+                    <td>3</td>
+                    <td>105</td>
+                    <td>57</td>
+                    <td>184.21</td>
+                </tr>
+                <tr>
+                    <td><img src="https://admin.thecricketer.com/weblab/Sites/96c8b790-b593-bfda-0ba4-ecd3a9fdefc2/resources/images/site/millerheadshot-min.jpg" alt="David Miller"></td>
+                    <td>David Miller</td>
+                    <td>Blue Panthers</td>
+                    <td>4</td>
+                    <td>99</td>
+                    <td>54</td>
+                    <td>183.33</td>
+                </tr>
+                <tr>
+                    <td><img src="http://127.0.0.1:5500/Bradley.png" alt="Bradley DSouza"></td>
+                    <td>Bradley DSouza</td>
+                    <td>Bandbros</td>
+                    <td>4</td>
+                    <td>90</td>
+                    <td>61</td>
+                    <td>147.54</td>
+                </tr>
+                <tr>
+                    <td><img src="https://api.bdcrictime.com/Profile/daryl-mitchell-12_10_2023.jpg" alt="Daryl Mitchell"></td>
+                    <td>Daryl Mitchell</td>
+                    <td>Peace Walkers</td>
+                    <td>4</td>
+                    <td>88</td>
+                    <td>61</td>
+                    <td>144.26</td>
+                </tr>
+                <tr>
+                    <td><img src="https://api.bdcrictime.com/Profile/dawid-malan-13_10_2023.jpg" alt="Dawid Malan"></td>
+                    <td>Dawid Malan</td>
+                    <td>Blue Panthers</td>
+                    <td>4</td>
+                    <td>85</td>
+                    <td>39</td>
+                    <td>217.95</td>
+                </tr>
+                <tr>
+                    <td><img src="http://127.0.0.1:5500/Selwyn.png" alt="Selwyn Baretto"></td>
+                    <td>Selwyn Baretto</td>
+                    <td>Royal Super Knights XI</td>
+                    <td>4</td>
+                    <td>63</td>
+                    <td>49</td>
+                    <td>128.57</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.mykhel.com/webp/images/cricket/players/8/7198.jpg" alt="Brandon King"></td>
+                    <td>Brandon King</td>
+                    <td>Royal Super Knights XI</td>
+                    <td>4</td>
+                    <td>56</td>
+                    <td>30</td>
+                    <td>186.67</td>
+                </tr>
+                <tr>
+                    <td><img src="https://admin.thecricketer.com/weblab/Sites/96c8b790-b593-bfda-0ba4-ecd3a9fdefc2/resources/images/site/jadejaheadshot-min.jpg" alt="Ravindra Jadeja"></td>
+                    <td>Ravindra Jadeja</td>
+                    <td>Peace Walkers</td>
+                    <td>1</td>
+                    <td>53</td>
+                    <td>17</td>
+                    <td>311.76</td>
+                </tr>
+                <tr>
+                    <td><img src="https://images.mykhel.com/webp/images/cricket/players/2/8012.jpg?v=3" alt="Phil Salt"></td>
+                    <td>Phil Salt</td>
+                    <td>Peace Walkers</td>
+                    <td>3</td>
+                    <td>53</td>
+                    <td>41</td>
+                    <td>129.27</td>
+                </tr>
+                <tr>
+                    <td><img src="https://static-files.cricket-australia.pulselive.com/headshots/440/3164-camedia.png" alt="Wanindu Hasaranga"></td>
+                    <td>Wanindu Hasaranga</td>
+                    <td>Blue Panthers</td>
+                    <td>4</td>
+                    <td>50</td>
+                    <td>24</td>
+                    <td>208.33</td>
+                </tr>
+                <tr>
+                    <td><img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200,q_60/lsci/db/PICTURES/CMS/319900/319942.png" alt="KL Rahul"></td>
+                    <td>KL Rahul</td>
+                    <td>Blue Panthers</td>
+                    <td>4</td>
+                    <td>41</td>
+                    <td>23</td>
+                    <td>178.26</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function showRound(roundNumber) {
+            alert('Showing data for Round ' + roundNumber);
+        }
+
+        function showPointsTable() {
+            alert('Showing Points Table');
+        }
+    </script>
+</body>
+</html>
