@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Wicket Takers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/esl-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .container {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 90%;
+        }
+        .buttons {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .buttons button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        table th, table td {
+            border: 1px solid #555;
+            padding: 10px;
+            text-align: center;
+        }
+        table th {
+            background-color: #444;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <button onclick="goBack()">Back</button>
+            <button onclick="location.href='round1.html'">Round 1</button>
+            <button onclick="location.href='round2.html'">Round 2</button>
+            <button onclick="location.href='points_table.html'">Points Table</button>
+        </div>
+        <h1 style="text-align: center;">TOP WICKET TAKERS</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Picture</th>
+                    <th>Player</th>
+                    <th>Team</th>
+                    <th>Overs</th>
+                    <th>Runs</th>
+                    <th>Dot Balls</th>
+                    <th>Wickets</th>
+                    <th>Economy Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://admin.thecricketer.com/weblab/Sites/96c8b790-b593-bfda-0ba4-ecd3a9fdefc2/resources/images/site/trentboultheadshot-min.jpg" alt="Trent Boult"></td>
+                    <td>Trent Boult</td>
+                    <td>Royal Super Knights XI</td>
+                    <td>15</td>
+                    <td>87</td>
+                    <td>48</td>
+                    <td>13</td>
+                    <td>5.80</td>
+                </tr>
+                <tr>
+                    <td><img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200,q_60/lsci/db/PICTURES/CMS/322000/322080.png" alt="Anrich Nortje"></td>
+                    <td>Anrich Nortje</td>
+                    <td>Blue Panthers</td>
+                    <td>11</td>
+                    <td>49</td>
+                    <td>39</td>
+                    <td>12</td>
+                    <td>4.45</td>
+                </tr>
+                <tr>
+                    <td><img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200,q_60/lsci/db/PICTURES/CMS/322900/322946.png" alt="Wanindu Hasaranga"></td>
+                    <td>Wanindu Hasaranga</td>
+                    <td>Blue Panthers</td>
+                    <td>9</td>
+                    <td>47</td>
+                    <td>35</td>
+                    <td>9</td>
+                    <td>5.22</td>
+                </tr>
+                <tr>
+                    <td><img src="http://127.0.0.1:5500/Umaid.png" alt="Umaid Ali Qureshi"></td>
+                    <td>Umaid Ali Qureshi</td>
+                    <td>Peace Walkers</td>
+                    <td>13</td>
+                    <td>70</td>
+                    <td>50</td>
+                    <td>7</td>
+                    <td>5.38</td>
+                </tr>
+                <tr>
+                    <td><img src="https://www.athletesvoice.com.au/wp-content/uploads/2019/05/CUMMINS_PV3_1280x720_01.jpg" alt="Patt Cummins"></td>
+                    <td>Patt Cummins</td>
+                    <td>Peace Walkers</td>
+                    <td>13</td>
+                    <td>70</td>
+                    <td>49</td>
+                    <td>7</td>
+                    <td>5.38</td>
+                </tr>
+                <tr>
+                    <td><img src="https://static-files.cricket-australia.pulselive.com/headshots/440/574-camedia.png" alt="Mohammad Amir"></td>
+                    <td>Mohammad Amir</td>
+                    <td>Peace Walkers</td>
+                    <td>9</td>
+                    <td>51</td>
+                    <td>38</td>
+                    <td>7</td>
+                    <td>5.67</td>
+                </tr>
+                <tr>
+                    <td><img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200,q_60/lsci/db/PICTURES/CMS/319900/319943.png" alt="Kuldeep Yadav"></td>
+                    <td>Kuldeep Yadav</td>
+                    <td>Bandbros</td>
+                    <td>9</td>
+                    <td>82</td>
+                    <td>20</td>
+                    <td>7</td>
+                    <td>9.11</td>
+                </tr>
+                <tr>
+                    <td><img src="https://admin.thecricketer.com/weblab/Sites/96c8b790-b593-bfda-0ba4-ecd3a9fdefc2/resources/images/site/kumarheadshot-min.jpg" alt="Bhuvneshwar Kumar"></td>
+                    <td>Bhuvneshwar Kumar</td>
+                    <td>Royal Super Knights XI</td>
+                    <td>10</td>
+                    <td>41</td>
+                    <td>38</td>
+                    <td>6</td>
+                    <td>4.10</td>
+                </tr>
+                <tr>
+                    <td><img src="https://admin.thecricketer.com/weblab/Sites/96c8b790-b593-bfda-0ba4-ecd3a9fdefc2/resources/images/site/jadejaheadshot-min.jpg" alt="Ravindra Jadeja"></td>
+                    <td>Ravindra Jadeja</td>
+                    <td>Peace Walkers</td>
+                    <td>14</td>
+                    <td>59</td>
+                    <td>58</td>
+                    <td>6</td>
+                    <td>4.21</td>
+                </tr>
+                <tr>
+                    <td><img src="https://admin.thecricketer.com/weblab/Sites/96c8b790-b593-bfda-0ba4-ecd3a9fdefc2/resources/images/site/ishsodhiheadshot.jpg" alt="Mitchel Starc"></td>
+                    <td>Ish Sodhi</td>
+                    <td>Peace Walkers</td>
+                    <td>13</td>
+                    <td>81</td>
+                    <td>48</td>
+                    <td>6</td>
+                    <td>6.23</td>
+                </tr>
+                <!-- Add other rows with pictures here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
