@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(90deg,rgb(255, 210, 210),rgb(177, 219, 255));
+            background: linear-gradient(90deg, rgb(255, 210, 210), rgb(177, 219, 255));
             color: #333;
             margin: 0;
             padding: 0;
@@ -25,7 +25,7 @@
             text-align: center;
         }
 
-        .card-container {
+        .card-container, .ManagerCards {
             display: flex;
             justify-content: center;
             gap: 20px;
@@ -40,7 +40,7 @@
             padding: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 250px;   
+            width: 250px;
             height: 200px;
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -50,15 +50,6 @@
             justify-content: center;
             align-items: center;
             position: relative;
-        }
-
-        .star {
-            font-size: 24px;
-            color: gold;
-            position: absolute;
-            bottom: 3px;
-            left: 50%;
-            transform: translateX(-50%);
         }
 
         .card:hover {
@@ -91,23 +82,8 @@
             height: 200px;
         }
 
-        .card-container a {
-            text-decoration: none;
-        }
-
-        /* Managers Cards Section */
-        .ManagerCards {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .card-container {
+            .card-container, .ManagerCards {
                 flex-direction: column;
                 align-items: center;
             }
@@ -183,41 +159,61 @@
 
     <!-- Managers Cards -->
     <br>
+    <h1>MANAGERS (TEAMS)</h1>
+    <a href="squads.html" class="linkofsquads">
+        <div class="ManagerCards">        
+            <div class="card bluepanthers">
+                <span class="star">&#9733;</span>
+                <img src="Talal.png" alt="Talal H Shah">
+                <div class="card-title">Talal H Shah</div>
+                <div class="card-description">Blue Panthers</div>
+            </div>
 
-        <h1>MANAGERS (TEAMS)</h1>
-        <a href="squads.html" class="linkofsquads"><div class="ManagerCards">        
-        <div class="card bluepanthers">
-            <span class="star">&#9733;</span>
-            <img src="Talal.png" alt="Talal H Shah">
-            <div class="card-title">Talal H Shah</div>
-            <div class="card-description">Blue Panthers</div>
+            <div class="card peacewalkers">
+                <span class="star">&#9733;</span>
+                <img src="Umaid.png" alt="Umaid Ali">
+                <div class="card-title">Umaid Ali</div>
+                <div class="card-description">Peace Walkers <br><i style="font-size: 12px;">(Defending Champions)</i></div>
+            </div>
+
+            <div class="card royalsuperknights">
+                <img src="Selwyn.png" alt="Selwyn Baretto">
+                <div class="card-title">Selwyn Baretto</div>
+                <div class="card-description">Royal Super Knights</div>
+            </div>
+
+            <div class="card bandbros">
+                <img src="Bradley.png" alt="Bradley D'souza">
+                <div class="card-title">Bradley D'souza</div>
+                <div class="card-description">Bandbros</div>
+            </div>
+
+            <div class="card blackhawks">
+                <img src="Yasir.png" alt="Yasir Saood">
+                <div class="card-title">Yasir Saood</div>
+                <div class="card-description">Black Hawks</div>
+            </div>
+        </div>
+    </a>
+
+    <!-- Additional Cards -->
+    <br>
+    <h1>ACHIEVEMENTS</h1>
+    <div class="card-container">
+        <div class="card">
+            <a href="topbowler.html">
+                <div class="card-title">HIGHEST WICKET TAKER</div>
+                <div class="card-description">Check the top wicket taker of the season</div>
+            </a>
         </div>
 
-        <div class="card peacewalkers">
-            <span class="star">&#9733;</span>
-            <img src="Umaid.png" alt="Umaid Ali">
-            <div class="card-title">Umaid Ali</div>
-            <div class="card-description">Peace Walkers <br><i style="font-size: 12px;">(Defending Champions)</i></div>
+        <div class="card">
+            <a href="topbatter.html">
+                <div class="card-title">HIGHEST RUN SCORER</div>
+                <div class="card-description">Check the top run scorer of the season</div>
+            </a>
         </div>
-
-        <div class="card royalsuperknights">
-            <img src="Selwyn.png" alt="Selwyn Baretto">
-            <div class="card-title">Selwyn Baretto</div>
-            <div class="card-description">Royal Super Knights</div>
-        </div>
-
-        <div class="card bandbros">
-            <img src="Bradley.png" alt="Bradley D'souza">
-            <div class="card-title">Bradley D'souza</div>
-            <div class="card-description">Bandbros</div>
-        </div>
-
-        <div class="card blackhawks">
-            <img src="Yasir.png" alt="Yasir Saood">
-            <div class="card-title">Yasir Saood</div>
-            <div class="card-description">Black Hawks</div>
-        </div>
-    </div></a>
+    </div>
 
 </body>
 </html>
