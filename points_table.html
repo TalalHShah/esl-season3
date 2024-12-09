@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(90deg,rgb(255, 210, 210),rgb(177, 219, 255)) !important;
+            background: linear-gradient(90deg, rgb(255, 210, 210), rgb(177, 219, 255)) !important;
             color: #000;
             margin: 0;
             padding: 0;
@@ -72,7 +72,7 @@
         }
 
         tr:hover {
-            background-color: #797979;
+            background-color: #76c6ff;
         }
 
         .table-container {
@@ -90,46 +90,62 @@
             width: 80%;
         }
 
-        .back-btn, .round-btn {
+        .btn {
+            display: inline-block;
             background-color: #6c757d;
             color: white;
             padding: 10px 20px;
-            border: none;
             font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 25%;
             text-align: center;
             text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            width: 25%;
         }
 
-        .back-btn:hover, .round-btn:hover {
-            background-color: #5a6268;
+        .btn:hover {
+            background-color: #685a68;
         }
 
-        .round-btn {
+        .btn-round {
             background-color: #007BFF;
         }
 
-        .round-btn:hover {
+        .btn-round:hover {
             background-color: #0056b3;
+        }
+
+        .btn-orange {
+            background-color: #ff9933;
+        }
+
+        .btn-orange:hover {
+            background-color: #e68a19;
+        }
+
+        .btn-purple {
+            background-color: #cc33ff;
+        }
+
+        .btn-purple:hover {
+            background-color: #a329cc;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            table {
-                width: 100%;
-                font-size: 14px;
-            }
             .button-container {
                 flex-direction: column;
                 align-items: center;
             }
-            .round-btn, .back-btn {
+            .btn {
                 width: 100%;
                 margin-bottom: 10px;
             }
+        }
+
+        .team-logo {
+            width: auto;
+            height: 50px;
         }
     </style>
 </head>
@@ -137,14 +153,14 @@
 
     <h1 style="color: black;">Points Table - ESL Season 3</h1>
 
-        <!-- Button Section -->
-        <div class="button-container">
-            <a href="round1.html" class="round-btn">Round 1</a>
-            <a href="round2.html" class="round-btn">Round 2</a>
-            <a href="index.html" class="back-btn">Back to Fixtures</a>
-            <a href="topbatter.html"><button class="btn" style="background-color: #ff9933;">Top Batter</button></a>
-            <a href="topbowler.html"><button class="btn" style="background-color: #cc33ff;">Top Bowler</button></a>
-        </div>
+    <!-- Button Section -->
+    <div class="button-container">
+        <a href="round1.html" class="btn btn-round">Round 1</a>
+        <a href="round2.html" class="btn btn-round">Round 2</a>
+        <a href="index.html" class="btn">Back to Fixtures</a>
+        <a href="topbatter.html" class="btn btn-orange">Top Batter</a>
+        <a href="topbowler.html" class="btn btn-purple">Top Bowler</a>
+    </div>
 
     <div class="table-container">
         <table>
@@ -162,53 +178,67 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td>Blue Panthers</td>
+                    <td>
+                        <img src="bplogo.png" alt="Blue Panthers Logo" class="team-logo"><br>
+                        Blue Panthers
+                    </td>
                     <td>5</td>
                     <td>4</td>
                     <td>1</td>
                     <td>12</td>
-                    <td color="green">+7.16</td>
+                    <td style="color: green;">+7.16</td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>Peace Walkers</td>
+                    <td>
+                        <img src="pwlogo.png" alt="Peace Walkers Logo" class="team-logo"><br>
+                        Peace Walkers
+                    </td>
                     <td>4</td>
                     <td>4</td>
                     <td>0</td>
                     <td>12</td>
-                    <td color="green">+6.74</td>
+                    <td style="color: green;">+6.74</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Royal Super Knights</td>
+                    <td>
+                        <img src="rsklogo.png" alt="Royal Super Knights Logo" class="team-logo"><br>
+                        Royal Super Knights
+                    </td>
                     <td>4</td>
                     <td>2</td>
                     <td>2</td>
                     <td>6</td>
-                    <td color="green">+3.19</td>
+                    <td style="color: green;">+3.19</td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>Bandbros</td>
+                    <td>
+                        <img src="bblogo.png" alt="Bandbros Logo" class="team-logo"><br>
+                        Bandbros
+                    </td>
                     <td>5</td>
                     <td>1</td>
                     <td>4</td>
                     <td>3</td>
-                    <td color="red">-4.4</td>
+                    <td style="color: red;">-4.4</td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td>Black Hawks</td>
+                    <td>
+                        <img src="bhlogo.png" alt="Black Hawks Logo" class="team-logo"><br>
+                        Black Hawks
+                    </td>
                     <td>4</td>
                     <td>0</td>
                     <td>4</td>
                     <td>0</td>
-                    <td color="red">-1.67</td>
+                    <td style="color: red;">-1.67</td>
                 </tr>
             </tbody>
         </table>
     </div>
-    
 
 </body>
 </html>
