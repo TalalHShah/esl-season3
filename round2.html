@@ -7,19 +7,18 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(90deg,rgb(255, 210, 210),rgb(177, 226, 255));
+            background: linear-gradient(90deg, rgb(255, 210, 210), rgb(177, 226, 255));
             color: #333;
             padding: 10px;
             display: flex;
             justify-content: center;
-            overflow: hidden;
-            position: relative;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            overflow: hidden;
+            position: relative;
         }
 
-        /* Background animation */
         body::before {
             content: "";
             position: absolute;
@@ -34,30 +33,18 @@
             z-index: -1;
         }
 
-        /* Animation keyframes */
         @keyframes moveBackground {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 100% 0;
-            }
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 0; }
         }
 
         .container {
             max-width: 600px;
             width: 100%;
             max-height: 90vh;
-            overflow-y: auto; /* Allow scroll only when content exceeds container */
-            -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
-            scrollbar-width: thin; /* For Firefox */
-            -ms-overflow-style: none;  /* For IE and Edge */
-            padding-right: 10px; /* To prevent the scrollbar from affecting layout */
-        }
-
-        .container::-webkit-scrollbar {
-            width: 0; /* Hide the scrollbar on Webkit browsers */
-            display: none;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            padding-right: 10px;
         }
 
         h1 {
@@ -92,14 +79,19 @@
             transition: transform 0.3s ease;
         }
 
-        .fixture:hover {
-            transform: scale(0.98);
-        }
+        .fixture:hover { transform: scale(0.98); }
 
         .team {
             font-weight: bold;
             flex: 1;
             text-align: center;
+        }
+
+        .team img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
         }
 
         .vs {
@@ -109,14 +101,6 @@
             margin: 0 8px;
         }
 
-        /* Team colors */
-        .pw { color: red; }
-        .rsk { color: rgb(194, 194, 0); }
-        .bp { color: blue; }
-        .bb { color: rgb(97, 16, 137); }
-        .bh { color: black; }
-
-        /* Styling for the buttons */
         .button-container {
             margin-bottom: 20px;
         }
@@ -145,42 +129,6 @@
         .back-btn:hover {
             background-color: #5a6268;
         }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 20px;
-            }
-
-            .fixture {
-                font-size: 14px;
-                padding: 8px;
-            }
-
-            .round {
-                font-size: 14px;
-            }
-
-            .btn {
-                font-size: 12px;
-                padding: 6px 12px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .fixture {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .team {
-                margin-bottom: 5px;
-            }
-
-            .vs {
-                margin: 5px 0;
-            }
-        }
     </style>
 </head>
 <body>
@@ -190,7 +138,7 @@
         <div class="button-container">
             <a href="index.html"><button class="btn back-btn">Back</button></a>
             <a href="round1.html"><button class="btn">Round 1</button></a>
-            <a href="points_table.html"><button class="btn" style="background-color: #28a745; color: white; border: none; padding: 8px 16px; font-size: 14px; border-radius: 5px; cursor: pointer; margin: 5px; transition: background-color 0.3s ease;">Points Table</button></a>
+            <a href="points_table.html"><button class="btn" style="background-color: #28a745;">Points Table</button></a>
             <a href="topbatter.html"><button class="btn" style="background-color: #ff9933;">Top Batter</button></a>
             <a href="topbowler.html"><button class="btn" style="background-color: #cc33ff;">Top Bowler</button></a>
         </div>
@@ -199,72 +147,103 @@
         <ul class="fixture-list">
             <li class="round">Round 2 - Match 1</li>
             <li class="fixture">
-                <span class="team bb">Bandbros (Home)</span>
+                <span class="team bb">
+                    <img src="bblogo.png" alt="Bandbros Logo"> Bandbros (Home)
+                </span>
                 <span class="vs">vs</span>
-                <span class="team bp">Blue Panthers (Away)</span>
+                <span class="team bp">
+                    <img src="bplogo.png" alt="Blue Panthers Logo"> Blue Panthers (Away)
+                </span>
             </li>
-
             <li class="round">Round 2 - Match 2</li>
             <li class="fixture">
-                <span class="team bh">Black Hawks (Home)</span>
+                <span class="team bh">
+                    <img src="bhlogo.png" alt="Black Hawks Logo"> Black Hawks (Home)
+                </span>
                 <span class="vs">vs</span>
-                <span class="team pw">Peace Walkers (Away)</span>
+                <span class="team pw">
+                    <img src="pwlogo.png" alt="Peace Walkers Logo"> Peace Walkers (Away)
+                </span>
             </li>
-
             <li class="round">Round 2 - Match 3</li>
             <li class="fixture">
-                <span class="team rsk">Royal Super Knights (Home)</span>
+                <span class="team rsk">
+                    <img src="rsklogo.png" alt="Royal Super Knights Logo"> Royal Super Knights (Home)
+                </span>
                 <span class="vs">vs</span>
-                <span class="team bh">Black Hawks (Away)</span>
+                <span class="team bh">
+                    <img src="bhlogo.png" alt="Black Hawks Logo"> Black Hawks (Away)
+                </span>
             </li>
-
             <li class="round">Round 2 - Match 4</li>
             <li class="fixture">
-                <span class="team bp">Blue Panthers (Home)</span>
+                <span class="team bp">
+                    <img src="bplogo.png" alt="Blue Panthers Logo"> Blue Panthers (Home)
+                </span>
                 <span class="vs">vs</span>
-                <span class="team rsk">Royal Super Knights (Away)</span>
+                <span class="team rsk">
+                    <img src="rsklogo.png" alt="Royal Super Knights Logo"> Royal Super Knights (Away)
+                </span>
             </li>
-
             <li class="round">Round 2 - Match 5</li>
             <li class="fixture">
-                <span class="team bb">Bandbros (Home)</span>
+                <span class="team bb">
+                    <img src="bblogo.png" alt="Bandbros Logo"> Bandbros (Home)
+                </span>
                 <span class="vs">vs</span>
-                <span class="team pw">Peace Walkers (Away)</span>
+                <span class="team pw">
+                    <img src="pwlogo.png" alt="Peace Walkers Logo"> Peace Walkers (Away)
+                </span>
             </li>
-
             <li class="round">Round 2 - Match 6</li>
             <li class="fixture">
-                <span class="team pw">Peace Walkers (Home)</span>
+                <span class="team pw">
+                    <img src="pwlogo.png" alt="Peace Walkers Logo"> Peace Walkers (Home)
+                </span>
                 <span class="vs">vs</span>
-                <span class="team bp">Blue Panthers (Away)</span>
+                <span class="team bp">
+                    <img src="bplogo.png" alt="Blue Panthers Logo"> Blue Panthers (Away)
+                </span>
             </li>
-
             <li class="round">Round 2 - Match 7</li>
             <li class="fixture">
-                <span class="team bh">Black Hawks (Home)</span>
+                <span class="team bh">
+                    <img src="bhlogo.png" alt="Black Hawks Logo"> Black Hawks (Home)
+                </span>
                 <span class="vs">vs</span>
-                <span class="team rsk">Royal Super Knights (Away)</span>
+                <span class="team rsk">
+                    <img src="rsklogo.png" alt="Royal Super Knights Logo"> Royal Super Knights (Away)
+                </span>
             </li>
-
             <li class="round">Round 2 - Match 8</li>
             <li class="fixture">
-                <span class="team rsk">Royal Super Knights (Home)</span>
+                <span class="team rsk">
+                    <img src="rsklogo.png" alt="Royal Super Knights Logo"> Royal Super Knights (Home)
+                </span>
                 <span class="vs">vs</span>
-                <span class="team bb">Bandbros (Away)</span>
+                <span class="team bb">
+                    <img src="bblogo.png" alt="Bandbros Logo"> Bandbros (Away)
+                </span>
             </li>
-
             <li class="round">Round 2 - Match 9</li>
             <li class="fixture">
-                <span class="team bp">Blue Panthers (Home)</span>
+                <span class="team bp">
+                    <img src="bplogo.png" alt="Blue Panthers Logo"> Blue Panthers (Home)
+                </span>
                 <span class="vs">vs</span>
-                <span class="team pw">Peace Walkers (Away)</span>
+                <span class="team pw">
+                    <img src="pwlogo.png" alt="Peace Walkers Logo"> Peace Walkers (Away)
+                </span>
             </li>
-
             <li class="round">Round 2 - Match 10</li>
             <li class="fixture">
-                <span class="team bb">Bandbros (Home)</span>
+                <span class="team bb">
+                    <img src="bblogo.png" alt="Bandbros Logo"> Bandbros (Home)
+                </span>
                 <span class="vs">vs</span>
-                <span class="team bh">Black Hawks (Away)</span>
+                <span class="team bh">
+                    <img src="bhlogo.png" alt="Black Hawks Logo"> Black Hawks (Away)
+                </span>
             </li>
         </ul>
     </div>
