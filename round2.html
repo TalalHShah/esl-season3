@@ -7,16 +7,16 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(90deg, rgb(255, 210, 210), rgb(177, 226, 255));
+            background: linear-gradient(90deg, rgb(255, 210, 210), rgb(177, 219, 255));
             color: #333;
             padding: 10px;
             display: flex;
             justify-content: center;
+            overflow: hidden;
+            position: relative;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            overflow: hidden;
-            position: relative;
         }
 
         body::before {
@@ -34,8 +34,12 @@
         }
 
         @keyframes moveBackground {
-            0% { background-position: 0 0; }
-            100% { background-position: 100% 0; }
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
         }
 
         .container {
@@ -43,8 +47,15 @@
             width: 100%;
             max-height: 90vh;
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
             scrollbar-width: thin;
+            -ms-overflow-style: none;
             padding-right: 10px;
+        }
+
+        .container::-webkit-scrollbar {
+            width: 0;
+            display: none;
         }
 
         h1 {
@@ -77,20 +88,24 @@
             align-items: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            position: relative;
         }
 
-        .fixture:hover { transform: scale(0.98); }
+        .fixture:hover {
+            transform: scale(0.98);
+        }
 
         .team {
             font-weight: bold;
             flex: 1;
             text-align: center;
+            display: flex;
+            align-items: center;
         }
 
         .team img {
             width: 20px;
             height: 20px;
-            vertical-align: middle;
             margin-right: 5px;
         }
 
@@ -100,6 +115,36 @@
             color: #888;
             margin: 0 8px;
         }
+
+        .result {
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            white-space: nowrap;
+        }
+
+        .fixture:hover .result {
+            display: block;
+        }
+
+        /* Background colors for results */
+        .pw { color: red; }
+        .rsk { color: rgb(194, 194, 0); }
+        .bp { color: blue; }
+        .bb { color: rgb(97, 16, 137); }
+        .bh { color: black; }
+
+        .result.pw-bg { background-color: red; color: white; }
+        .result.rsk-bg { background-color: yellow; color: black; }
+        .result.bp-bg { background-color: skyblue; color: white; }
+        .result.bb-bg { background-color: black; color: white; }
 
         .button-container {
             margin-bottom: 20px;
@@ -134,116 +179,94 @@
 <body>
 
     <div class="container">
-        <!-- Buttons for navigation -->
         <div class="button-container">
             <a href="index.html"><button class="btn back-btn">Back</button></a>
             <a href="round1.html"><button class="btn">Round 1</button></a>
             <a href="points_table.html"><button class="btn" style="background-color: #28a745;">Points Table</button></a>
-            <a href="topbatter.html"><button class="btn" style="background-color: #ff9933;">Top Batter</button></a>
-            <a href="topbowler.html"><button class="btn" style="background-color: #cc33ff;">Top Bowler</button></a>
+            <a href="top_batter.html"><button class="btn" style="background-color: #ff9933;">Top Batter</button></a>
+            <a href="top_bowler.html"><button class="btn" style="background-color: #cc33ff;">Top Bowler</button></a>
         </div>
 
         <h1>Round 2 Fixtures</h1>
         <ul class="fixture-list">
             <li class="round">Round 2 - Match 1</li>
             <li class="fixture">
-                <span class="team bb">
-                    <img src="bblogo.png" alt="Bandbros Logo"> Bandbros (Home)
-                </span>
+                <span class="team bp"><img src="bplogo.png" alt="Blue Panthers Logo">Blue Panthers (Home)</span>
                 <span class="vs">vs</span>
-                <span class="team bp">
-                    <img src="bplogo.png" alt="Blue Panthers Logo"> Blue Panthers (Away)
-                </span>
+                <span class="team pw"><img src="pwlogo.png" alt="Peace Walkers Logo">Peace Walkers (Away)</span>
+                <span class="result pw-bg">Peace Walkers Won</span>
             </li>
+
             <li class="round">Round 2 - Match 2</li>
             <li class="fixture">
-                <span class="team bh">
-                    <img src="bhlogo.png" alt="Black Hawks Logo"> Black Hawks (Home)
-                </span>
+                <span class="team bb"><img src="bblogo.png" alt="Bandbros Logo">Bandbros (Home)</span>
                 <span class="vs">vs</span>
-                <span class="team pw">
-                    <img src="pwlogo.png" alt="Peace Walkers Logo"> Peace Walkers (Away)
-                </span>
+                <span class="team rsk"><img src="rsklogo.png" alt="Royal Super Knights Logo">Royal Super Knights (Away)</span>
+                <span class="result rsk-bg">Royal Super Knights Won</span>
             </li>
+
             <li class="round">Round 2 - Match 3</li>
-            <li class="fixture">
-                <span class="team rsk">
-                    <img src="rsklogo.png" alt="Royal Super Knights Logo"> Royal Super Knights (Home)
-                </span>
+            <li class="fixture" data-result="Bandbros Won">
+                <span class="team bb"><img src="bblogo.png" alt="Bandbros Logo">Bandbros (Home)</span>
                 <span class="vs">vs</span>
-                <span class="team bh">
-                    <img src="bhlogo.png" alt="Black Hawks Logo"> Black Hawks (Away)
-                </span>
+                <span class="team bh"><img src="bhlogo.png" alt="Black Hawks Logo">Black Hawks (Away)</span>
+                <span class="result bb-bg">Bandbros Won</span>
             </li>
+
             <li class="round">Round 2 - Match 4</li>
-            <li class="fixture">
-                <span class="team bp">
-                    <img src="bplogo.png" alt="Blue Panthers Logo"> Blue Panthers (Home)
-                </span>
+            <li class="fixture" data-result="Blue Panthers Won">
+                <span class="team bp"><img src="bplogo.png" alt="Blue Panthers Logo">Blue Panthers (Home)</span>
                 <span class="vs">vs</span>
-                <span class="team rsk">
-                    <img src="rsklogo.png" alt="Royal Super Knights Logo"> Royal Super Knights (Away)
-                </span>
+                <span class="team rsk"><img src="rsklogo.png" alt="Royal Super Knights Logo">Royal Super Knights (Away)</span>
+                <span class="result bp-bg">Blue Panthers Won</span>
             </li>
+
             <li class="round">Round 2 - Match 5</li>
-            <li class="fixture">
-                <span class="team bb">
-                    <img src="bblogo.png" alt="Bandbros Logo"> Bandbros (Home)
-                </span>
+            <li class="fixture" data-result="Peace Walkers Won">
+                <span class="team bh"><img src="bhlogo.png" alt="Black Hawks Logo">Black Hawks (Home)</span>
                 <span class="vs">vs</span>
-                <span class="team pw">
-                    <img src="pwlogo.png" alt="Peace Walkers Logo"> Peace Walkers (Away)
-                </span>
+                <span class="team pw"><img src="pwlogo.png" alt="Peace Walkers Logo">Peace Walkers (Away)</span>
+                <span class="result pw-bg">Peace Walkers Won</span>
             </li>
+
             <li class="round">Round 2 - Match 6</li>
-            <li class="fixture">
-                <span class="team pw">
-                    <img src="pwlogo.png" alt="Peace Walkers Logo"> Peace Walkers (Home)
-                </span>
+            <li class="fixture" data-result="Blue Panthers Won">
+                <span class="team bb"><img src="bblogo.png" alt="Bandbros Logo">Bandbros (Home)</span>
                 <span class="vs">vs</span>
-                <span class="team bp">
-                    <img src="bplogo.png" alt="Blue Panthers Logo"> Blue Panthers (Away)
-                </span>
+                <span class="team bp"><img src="bplogo.png" alt="Blue Panthers Logo">Blue Panthers (Away)</span>
+                <span class="result bp-bg">Blue Panthers Won</span>
             </li>
+
             <li class="round">Round 2 - Match 7</li>
-            <li class="fixture">
-                <span class="team bh">
-                    <img src="bhlogo.png" alt="Black Hawks Logo"> Black Hawks (Home)
-                </span>
+            <li class="fixture" data-result="Peace Walkers Won">
+                <span class="team rsk"><img src="rsklogo.png" alt="Royal Super Knights Logo">Royal Super Knights (Home)</span>
                 <span class="vs">vs</span>
-                <span class="team rsk">
-                    <img src="rsklogo.png" alt="Royal Super Knights Logo"> Royal Super Knights (Away)
-                </span>
+                <span class="team pw"><img src="pwlogo.png" alt="Peace Walkers Logo">Peace Walkers (Away)</span>
+                <span class="result pw-bg">Peace Walkers Won</span>
             </li>
+
             <li class="round">Round 2 - Match 8</li>
-            <li class="fixture">
-                <span class="team rsk">
-                    <img src="rsklogo.png" alt="Royal Super Knights Logo"> Royal Super Knights (Home)
-                </span>
+            <li class="fixture" data-result="Blue Panthers Won">
+                <span class="team bh"><img src="bhlogo.png" alt="Black Hawks Logo">Black Hawks (Home)</span>
                 <span class="vs">vs</span>
-                <span class="team bb">
-                    <img src="bblogo.png" alt="Bandbros Logo"> Bandbros (Away)
-                </span>
+                <span class="team bp"><img src="bplogo.png" alt="Blue Panthers Logo">Blue Panthers (Away)</span>
+                <span class="result bp-bg">Blue Panthers Won</span>
             </li>
+
             <li class="round">Round 2 - Match 9</li>
-            <li class="fixture">
-                <span class="team bp">
-                    <img src="bplogo.png" alt="Blue Panthers Logo"> Blue Panthers (Home)
-                </span>
+            <li class="fixture" data-result="Royal Super Knights Won">
+                <span class="team rsk"><img src="rsklogo.png" alt="Royal Super Knights Logo">Royal Super Knights (Home)</span>
                 <span class="vs">vs</span>
-                <span class="team pw">
-                    <img src="pwlogo.png" alt="Peace Walkers Logo"> Peace Walkers (Away)
-                </span>
+                <span class="team bh"><img src="bhlogo.png" alt="Black Hawks Logo">Black Hawks (Away)</span>
+                <span class="result rsk-bg">Royal Super Knights Won</span>
             </li>
+
             <li class="round">Round 2 - Match 10</li>
-            <li class="fixture">
-                <span class="team bb">
-                    <img src="bblogo.png" alt="Bandbros Logo"> Bandbros (Home)
-                </span>
+            <li class="fixture" data-result="Peace Walkers Won">
+                <span class="team pw"><img src="pwlogo.png" alt="Peace Walkers Logo">Peace Walkers (Home)</span>
                 <span class="vs">vs</span>
-                <span class="team bh">
-                    <img src="bhlogo.png" alt="Black Hawks Logo"> Black Hawks (Away)
-                </span>
+                <span class="team bb"><img src="bblogo.png" alt="Bandbros Logo">Bandbros (Away)</span>
+                <span class="result pw-bg">Peace Walkers Won</span>
             </li>
         </ul>
     </div>
